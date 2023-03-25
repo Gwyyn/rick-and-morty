@@ -1,0 +1,153 @@
+body {
+    background: #111;
+    font-family: "Open Sans", sans-serif;
+}
+
+.glowOnHover {
+    margin-top: 1%;
+    width: 270px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+}
+
+.btnCont {
+    display: flex;
+    flex-direction: column;
+}
+
+.glowOnHover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+
+}
+
+.glowOnHover:active {
+    color: #000
+}
+
+.glowOnHover:active:after {
+    background: transparent;
+}
+
+.glowOnHover:hover:before {
+    opacity: 1;
+}
+
+.glowOnHover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.cta-background {
+    background-size: cover;
+    background-position: center center;
+    bottom: 0;
+    filter: blur(50px);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.container {
+    /*display: flex;*/
+    /*height: 100vh;*/
+    /*justify-content: space-around;*/
+    margin: 7vh 2vw 1vw;
+
+    /*margin-right: 0;*/
+    max-width: 350px;
+}
+
+.cta {
+    background: #333;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    border-radius: 30px;
+}
+
+.cta:hover img {
+    top: -10%;
+    filter: brightness(70%);
+}
+
+.cta:hover .text {
+    bottom: 10px;
+}
+
+.cta img {
+    bottom: 0;
+    filter: brightness(100%);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    width: 100%;
+}
+
+.cta .text {
+    bottom: -17%;
+    padding: 15px;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    justify-items: center;
+}
+
+.cta .text h1 {
+    color: #fff;
+    display: inline-block;
+    /*font-weight: 300;*/
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.cta .text p {
+    color: #fff;
+    font-weight: 300;
+}
+

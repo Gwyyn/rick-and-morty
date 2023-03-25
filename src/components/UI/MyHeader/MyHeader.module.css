@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.myHeader {
+    width: 100%;
+    height: 30px;
+    color: aquamarine;
+}
+
+.div__container {
+    background: #cceae0;
+    width: 100%;
+    height: 60px;
+}
+
+.txtLogo {
+
+}

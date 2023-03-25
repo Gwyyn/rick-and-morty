@@ -1,0 +1,133 @@
+.myModal {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.myModal.active {
+    opacity: 1;
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+
+}
+
+.myModalContent {
+    width: 60vw;
+    height: 60vh;
+    padding: 25px;
+    background: #3b3b3b;
+    border-radius: 25px;
+    transition: 0.4s all;
+    color: #dad5d5;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.7);
+    position: relative;
+    display: flex;
+
+}
+
+@media only screen and (max-width: 950px) {
+    .myModalContent {
+        width: 70%;
+        max-height: 100%;
+    }
+}
+
+.photo {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border-radius: 25px;
+    height: 300px;
+    width: 300px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
+    float: left;
+
+}
+
+
+@media only screen and (max-width: 750px) {
+    .myModalContent {
+        height: 80vh;
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*.photo {*/
+    /*    margin: 0;*/
+    /*    width: 50vw;*/
+    /*    height: 45vh;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 1200px) {
+    .myModalContent {
+        width: 60vw;
+        height: 60vh;
+
+    }
+    /*.photo {*/
+    /*    height: 45vh;*/
+    /*    width: 25vw;*/
+    /*}*/
+
+}
+@media only screen and (max-height: 450px) {
+    .myModalContent {
+        height: 93vh;
+        width: 70vw;
+    }
+    /*.photo {*/
+    /*    margin: 0;*/
+
+    /*    height: 60vh;*/
+    /*}*/
+}
+
+.name {
+    font-family: "Open Sans", sans-serif;
+    flex-grow: 1;
+    /*text-align: center;*/
+    font-size: 32px;
+    color: #fff;
+    /*font-weight: 300;*/
+    position: relative;
+    height: 30px;
+    font-weight: bold;
+    margin-left: 28vw;
+    /*position: absolute;*/
+
+}
+
+.gender {
+    font-family: "Open Sans", sans-serif;
+    flex-grow: 1;
+    font-size: 20px;
+    color: #fff;
+    height: 30px;
+    margin-left: 28vw;
+    margin-top: 6vh;
+
+}
+
+.info {
+    font-family: "Open Sans", sans-serif;
+    flex-grow: 1;
+    font-size: 20px;
+    color: #fff;
+    height: 30px;
+    margin-left: 28vw;
+    margin-top: 2vh;
+}
+

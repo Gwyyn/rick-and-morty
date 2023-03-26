@@ -91,12 +91,7 @@ body {
 }
 
 .container {
-    /*display: flex;*/
-    /*height: 100vh;*/
-    /*justify-content: space-around;*/
     margin: 7vh 2vw 1vw;
-
-    /*margin-right: 0;*/
     max-width: 350px;
 }
 

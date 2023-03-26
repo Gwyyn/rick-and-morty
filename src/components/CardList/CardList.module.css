@@ -1,12 +1,17 @@
-.containerCards{
+.containerCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.red {
-    background-color: red;
+.loadingBar {
+    /*background-color: red;*/
     height: 40px;
+}
+
+.loaderWrap {
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {

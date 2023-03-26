@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-
+import cl from './BtnScrollToTop.module.css'
 const BtnScrollToTop = () => {
     const [btnScrollToTop, setBtnScrollToTop] = useState(false);
 
@@ -27,19 +27,7 @@ const BtnScrollToTop = () => {
     return (
         <div>
             {btnScrollToTop && (
-                <button
-                    style={{
-                        position: "fixed",
-                        bottom: "50px",
-                        right: "30px",
-                        height: "45px",
-                        width: "50px",
-                        fontSize: "50px",
-                        zIndex: 1,
-                        borderRadius: "13px",
-                        background: "#08BAE3",
-                        border: "none"
-                    }}
+                <button className={cl.btn}
                     onClick={scrollUp}
                 >^</button>
             )}

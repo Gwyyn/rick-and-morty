@@ -59,7 +59,6 @@ function App() {
         }
         const response = await CardService.getCards(page)
         setCards([...cards, ...response.data.results]);
-        console.log(page);
     }
 
     useEffect(() => {
@@ -80,7 +79,6 @@ function App() {
             <BtnScrollToTop/>
             <MyHeader/>
             <CardList cards={cards} setSelectedItem={setSelectedItem}/>
-
             {!showLoader &&
                 <div className={cl.loaderWrap}><MyLoader/></div>
 

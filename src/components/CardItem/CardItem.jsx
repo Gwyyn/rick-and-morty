@@ -6,7 +6,6 @@ const CardItem = (props) => {
         <div className={cl.container}>
             <div className={cl.cta}>
                 <img
-                    // src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"/>
                     src={props.card.image}/>
                 <div className={cl.text}>
                     <h1>{props.card.name}</h1>

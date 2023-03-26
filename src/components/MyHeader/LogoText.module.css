@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+}
+
+.title {
+    user-select: none;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Get Schwifty', sans-serif;
+    font-size: 100px;
+    color: #08BAE3;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+}
+
+.spanAnd {
+    font-size: 0.5em;
+}
+

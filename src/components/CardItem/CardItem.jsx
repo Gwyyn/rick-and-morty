@@ -1,5 +1,5 @@
 import React from 'react';
-import cl from "./UI/MyCard/MyCard.module.css";
+import cl from "./CardItem.module.css";
 
 const CardItem = (props) => {
     return (

@@ -1,13 +1,13 @@
-import MyHeader from "./components/UI/MyHeader/MyHeader";
+import MyHeader from "./components/MyHeader/MyHeader";
 
-import CardList from "./components/CardList";
-import {useFetching} from "./components/hooks/useFetching";
-import CardService from "./components/API/CardService";
+import CardList from "./components/CardList/CardList";
+import {useFetching} from "./hooks/useFetching";
+import CardService from "./API/CardService";
 import React, {useEffect, useState} from "react";
 import {useInView} from 'react-intersection-observer';
-import cl from "./components/styles/CardList.module.css";
-import BtnScrollToTop from "./components/UI/btnScrollToTop/BtnScrollToTop";
-import MyModal from "./components/UI/MyModal/MyModal";
+import cl from "./components/CardList/CardList.module.css";
+import BtnScrollToTop from "./components/btnScrollToTop/BtnScrollToTop";
+import MyModal from "./components/MyModal/MyModal";
 
 
 function App() {
@@ -56,36 +56,26 @@ function App() {
     }, [page])
 
     async function fetchCard() {
-        console.log(page)
         const response = await CardService.getCards(page)
         setCards([...cards, ...response.data.results]);
-        console.log(response.data.results);
     }
 
     async function fetchData() {
         const response = await CardService.getAll();
-        console.log(response.data.results)
-        console.log("response")
         // setCards(response.data.results);
         setTotalPageCount(response.data.info.pages);
     }
 
-    // console.log(cards)cards
-
     return (
-
-        <div className="App">
+        <div>
             {!!selectedItem &&
-                <MyModal  selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>
+                <MyModal selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>
             }
             <BtnScrollToTop/>
             <MyHeader/>
             <CardList cards={cards} setSelectedItem={setSelectedItem}/>
             <div ref={ref} className={cl.red}></div>
-
         </div>
-
-
     );
 }
 

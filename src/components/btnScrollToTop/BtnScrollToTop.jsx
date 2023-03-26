@@ -25,7 +25,7 @@ const BtnScrollToTop = () => {
         })
     }
     return (
-        <div className="App">
+        <div>
             {btnScrollToTop && (
                 <button
                     style={{
@@ -35,7 +35,7 @@ const BtnScrollToTop = () => {
                         height: "45px",
                         width: "50px",
                         fontSize: "50px",
-                        zIndex: 1000,
+                        zIndex: 1,
                         borderRadius: "13px",
                         background: "#08BAE3",
                         border: "none"
